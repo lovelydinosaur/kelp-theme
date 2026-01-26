@@ -1,6 +1,6 @@
 # MkDocs Kelp Theme
 
-This is a Kelp UI theme for MkDocs version 2, currently in development.
+This is a [Kelp UI](https://kelpui.com/) theme for MkDocs version 2, currently in development.
 
 Installable by including the URL in the `mkdocs.toml` config...
 
