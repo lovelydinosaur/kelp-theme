@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us" class="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ nav.current.title or page.title }}{{ " - " ~ config.context.title if config.context.title }}</title>
+        <link rel="icon" href="{{ '/img/favicon.ico' | url }}">
+        <link rel="stylesheet" href="{{ '/css/kelp.css' | url }}">
+        <script type="module" src="{{ '/js/kelp.js' | url }}"></script>
+        <style>
+            table tbody tr:nth-child(odd of :not([hidden])) {
+                background-color: var(--background-color);
+            }
+            h1 a {text-decoration: none;}
+        </style>
+    </head>
+    <body class="dark" style="
+    --border-color: linear-gradient(to right, #ffafc7 10%, #73d7ee 10% 20%, #613915 20% 30%, #000000 30% 40%, #e50000 40% 50%, #ff8d00 50% 60%, #ffee00 60% 70%, #028121 70% 80%, #004cff 80% 90%, #760088 90%);
+    border-top: 0.5em solid var(--color-gray-70);
+    border-image: var(--border-color) 1;
+">
+        <!-- <nav class="left">
+            {{ nav.html }}
+        </nav>
+        <nav class="right">
+            {{ page.toc }}
+        </nav> -->
+        <main>
+            <br/>
+            <div class="container">
+            {{ page.html }}
+            {% if nav.previous or nav.next %}
+            <nav class="margin-start-6xl">
+                <div class="split">
+                    <div>
+                        {% if nav.previous %}
+                        <a class="previous" href="{{ nav.previous.url }}">← {{ nav.previous.title }}</a>
+                        {% endif %}
+                    </div>
+                    <div class="text-end">
+                        {% if nav.next %}
+                        <a class="next" href="{{ nav.next.url }}">{{ nav.next.title }} →</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </nav>
+            <br/>
+            {% endif %}
+            </div>
+        </main>
+    </body>
+</html>
