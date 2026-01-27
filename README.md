@@ -11,3 +11,11 @@ resources = [
     {directory="docs"},
 ]
 ```
+
+## License
+
+Kelp is licensed under a [fair-code license](https://faircode.io/). You can…
+
+View and modify the source code.
+Use it for free for non-commercial purposes under the [Kelp Commons license](https://kelpui.com/license/commons) (including making changes and redistributing them).
+Use it for commercial purposes with a [Pro](https://kelpui.com/license/pro) or [Enterprise](https://kelpui.com/license/enterprise) license.
