@@ -6,10 +6,13 @@ Installable by including the URL in the `mkdocs.toml` config...
 
 ```toml
 [mkdocs]
-resources = [
-    {url="https://github.com/lovelydinosaur/kelp-theme/archive/refs/heads/main.zip"},
-    {directory="docs"},
+nav = [
+    {path="README.md", title="Readme"}
 ]
+
+[loaders]
+theme = "https://github.com/lovelydinosaur/kelp-theme/archive/refs/heads/main.zip"
+docs = "dir://docs"
 ```
 
 ## License
